@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
+<head>
     <meta charset='utf-8'>
     <title>SVG 1.1 Default ARIA Semantics</title>
     <script src='http://www.w3.org/Tools/respec/respec-w3c-common' async class='remove'></script>
@@ -9,18 +9,18 @@
       var respecConfig = {
               specStatus:   "unofficial"
           ,   shortName:    "svg-aria-semantics"
-          ,   editors:      [{ name: "Steve Faulkner", url: "http://berjon.com/",
+          ,   editors:      [{ name: "Steve Faulkner", url: "https://twitter.com/stevefaulkner",
                                company: "TPG", companyURL: "http://www.paciellogroup.com" }]
           ,   wg:           ""
           ,   wgURI:        ""
           ,   wgPublicList: ""
-          ,   edDraftURI:   "http://darobin.github.com/formic/specs/json/"
+          ,   edDraftURI:   "http://stevefaulkner.github.io/SVG1.1/"
           ,   license:      "cc-by"
           ,   bugTracker: {
-                  open: "https://github.com/darobin/formic/issues?labels=json&page=1&state=open"
-              ,   new:  "https://github.com/darobin/formic/issues/new"
+                  open: "https://github.com/stevefaulkner/SVG1.1/issues?page=1&state=open"
+              ,   new:  "https://github.com/stevefaulkner/SVG1.1/issues/new"
               }
-          ,   issueBase:    "https://github.com/darobin/formic/issues/"
+          ,   issueBase:    "https://github.com/stevefaulkner/SVG1.1/"
         };
     </script>
     <style>
@@ -32,12 +32,75 @@
       ol li {
           line-height:  160%;
       }
+	  
+table
+
+{
+
+	border-collapse: collapse;
+
+	border: 1px solid #630;	
+	
+font: normal 95% arial, Verdana, helvetica, sans-serif;
+}
+
+caption {font-weight: bold}
+
+th, td
+
+{
+
+	text-align: left;
+
+	vertical-align: top;
+
+	padding: 0.3em;
+
+	border: 1px solid #630;
+
+}
+
+td h1 {font-size:85%;margin:0 0 0 0;}
+td p {margin:5px 2px 5px 2px;}
+thead th
+
+{
+
+	font-weight: bold;
+
+	text-align: center;
+
+}
+
+/*td span {border: 2px solid #9acd32;display:inline-block;padding:2px;}
+span:focus {background:#f5f5f5;border: 2px solid #a0522d;}
+td:focus {background:#f5f5f5;border: 2px solid #a0522d;}*/
+caption {text-align:left}
+
+
+.support {color:#090;font-size:1.2em }
+	.partial {color:#939393;font-size:1.2em }
+	.nosupport{color:#F00;font-size:1.2em }
+
+
+	div.example{border: 1px dashed #b8860b;padding: 5px;margin-top:5px;background:#FFFFFF}
+	
+	sup {font-size: 80%}
+	td ul {padding-left:4px;list-style-type:none}
+	img {border:none}
+	code.block {color:#BF3400;padding: 10px;display:block;background:#EBEBEB;min-width:20em;max-width:48em;}
+        code.blockat {color:#BF3400;padding: 10px;display:block;background:#FFFFD0;min-width:20em;max-width:48em;}
+	mark {background-color:#FF9}
+	div, section, hr {margin-top:10px}
+        code {color:#BF3400 !important;}
+
+.example {margin-left:30px;} 
+
     </style>
 </head>
 <body>
-<h1>SVG 1.1 Implicit ARIA Semantics </h1>
-<h2 id="struct-implicit-aria-semantics">Implicit ARIA Semantics</h2>
-<p>The following table defines the implicit native   semantics and corresponding default implicit ARIA   semantics that apply to <a href="http://www.w3.org/TR/SVG/eltindex.html">SVG elements</a>.  Each language feature (element) in a cell in the first   column implies the ARIA semantics (role, states, and/or properties) given in the cell in the second column of the same row. The third  column defines restrictions as to what WAI-ARIA semantic (role, state, or property) may or may not apply.</p>
+<h1>SVG 1.1 Implicit ARIA Semantics</h1>
+<p>The following table defines the implicit native semantics and corresponding default implicit ARIA semantics that apply to <a href="http://www.w3.org/TR/SVG/eltindex.html">SVG 1.1 elements</a>. Each language feature (element) in a cell in the first   column implies the ARIA semantics (role, states, and/or properties) given in the cell in the second column of the same row. The third  column defines restrictions as to what WAI-ARIA semantic (role, state, or property) may or may not apply.</p>
 <table id="struct-table-aria-implicit">
   <thead>
     <tr>
@@ -64,8 +127,8 @@
     </tr>
     <tr>
       <td>'<a href="http://www.w3.org/TR/SVG/text.html#AltGlyphItemElement">altGlyphItem</a>'</td>
-      <td>presentation role provided no associated &lsquo;<a href="https://svgwg.org/svg2-draft/single-page.html#struct-TitleElement">title</a>&rsquo; element, &lsquo;<a href="https://svgwg.org/svg2-draft/single-page.html#struct-DescElement">desc</a>&rsquo; element, &lsquo;<a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-label">aria-label</a>&rsquo; attribute, &lsquo;<a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-labelledby">aria-labelledby</a>&rsquo; attribute, or &lsquo;<a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-describedby">aria-describedby</a>&rsquo; attribute; otherwise, group role</td>
-      <td>no restrictions</td>
+      <td>none</td>
+      <td>no role may be applied</td>
     </tr>
     <tr>
       <td>&lsquo;<a href="http://www.w3.org/TR/SVG/animate.html#AnimateElement">animate</a>&rsquo;</td>
