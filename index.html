@@ -3,7 +3,7 @@
 <html lang='en'>
 <head>
     <meta charset='utf-8'>
-    <title>SVG 1.1 Default ARIA Semantics</title>
+    <title>SVG 1.1 default implicit ARIA semantics</title>
     <script src='http://www.w3.org/Tools/respec/respec-w3c-common' async class='remove'></script>
     <script class='remove'>
       var respecConfig = {
@@ -99,7 +99,6 @@ caption {text-align:left}
     </style>
 </head>
 <body>
-<h1>SVG 1.1 Implicit ARIA Semantics</h1>
 <p>The following table defines the implicit native semantics and corresponding default implicit ARIA semantics that apply to <a href="http://www.w3.org/TR/SVG/eltindex.html">SVG 1.1 elements</a>. Each language feature (element) in a cell in the first   column implies the ARIA semantics (role, states, and/or properties) given in the cell in the second column of the same row. The third  column defines restrictions as to what WAI-ARIA semantic (role, state, or property) may or may not apply.</p>
 <table id="struct-table-aria-implicit">
   <thead>
@@ -502,8 +501,8 @@ caption {text-align:left}
     </tr>
     <tr>
       <td>&lsquo;<a href="http://www.w3.org/TR/SVG/fonts.html#VKernElement">vkern</a>&rsquo;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>none</td>
+      <td>no role may be applied</td>
     </tr>
   </tbody>
 </table>
